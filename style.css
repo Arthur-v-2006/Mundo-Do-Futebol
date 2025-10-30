@@ -1,0 +1,1104 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* ===== MENU HAMBURGUER NO BANNER ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 12px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background: #004d00e6;
+  border-radius: 6px;
+  border: 2px solid white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 30px;
+  background: white;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* ===== NAV ===== */
+nav {
+  background: #004d00;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+section {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #004d00;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+h3 {
+  color: #004d00;
+  margin-bottom: 1rem;
+}
+
+/* ===== HEADER DA SEÇÃO JOGADORES ===== */
+.jogadores-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.jogadores-header h2 {
+  margin-bottom: 0;
+  text-align: left;
+  flex: 1;
+}
+
+/* ===== BARRA DE PESQUISA ===== */
+.search-container {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.search-input {
+  padding: 0.7rem 1rem;
+  border: 2px solid #004d00;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 250px;
+}
+
+.search-input:focus {
+  border-color: #006600;
+  box-shadow: 0 0 8px rgba(0, 102, 0, 0.3);
+}
+
+.search-button {
+  padding: 0.7rem 1rem;
+  background: #004d00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  min-width: 45px;
+}
+
+.search-button:hover {
+  background: #006600;
+}
+
+/* Estilo para quando não há resultados */
+.no-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin: 2rem 0;
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+}
+
+/* ===== CARDS DE JOGADORES ===== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas fixas */
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  overflow: hidden;
+  min-height: 250px; /* Altura mínima para padronizar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  margin: 0.8rem 0;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  min-height: 40px; /* Altura fixa para os nomes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Responsividade para 5 colunas */
+@media (max-width: 1200px) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas menores */
+  }
+}
+
+@media (max-width: 992px) {
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: 1fr; /* 1 coluna em mobile pequeno */
+  }
+  
+  .card {
+    min-height: 200px; /* Altura menor em mobile */
+  }
+  
+  .card img {
+    height: 150px;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+    min-height: 30px;
+  }
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-content h2 {
+  color: #004d00;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.modal-content h3 {
+  margin-top: 1.5rem;
+  color: #004d00;
+}
+
+.modal-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== CURIOSIDADES ===== */
+.curiosidade {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.curiosidade img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  border-radius: 6px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.curiosidade h3 {
+  color: #004d00;
+  margin-bottom: 0.5rem;
+}
+
+.curiosidade p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ===== COPA DO MUNDO ===== */
+.titulos-selecoes {
+  margin-bottom: 3rem;
+}
+
+.cards-titulos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 900px; /* Largura máxima para centralizar */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-titulo {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px; /* Altura mínima para padronizar */
+}
+
+.titulos-selecoes h3 {
+  color: #004d00;
+  text-align: center;
+}
+
+.card-titulo img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.card-titulo h4 {
+  color: #004d00;
+  margin-bottom: 0.5rem;
+}
+
+.numero-titulos {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+}
+
+.anos-titulos {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.campeoes-artilheiros {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.tabela-campeoes, .tabela-artilheiros {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #004d00;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+.estatisticas {
+  margin-top: 2rem;
+}
+
+.cards-estatisticas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-estatistica {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card-estatistica h4 {
+  color: #004d00;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #004d00;
+  padding-bottom: 0.5rem;
+}
+
+/* ===== HISTÓRIA ===== */
+.introducao-historia {
+  background: linear-gradient(135deg, #004d00, #006600);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.historia-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.era {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #004d00;
+}
+
+.era-titulo {
+  color: #004d00;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #004d00;
+  text-align: center;
+}
+
+.historia-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #006600;
+}
+
+.historia-item h4 {
+  color: #004d00;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.resumo-cronologico {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cronologia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.decada {
+  background: linear-gradient(135deg, #004d00, #006600);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.decada:hover {
+  transform: translateY(-5px);
+}
+
+.ano {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.evento {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ===== PÁGINA INICIAL ===== */
+#inicio {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#inicio p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (min-width: 768px) {
+  .banner h1 {
+    font-size: 3rem;
+  }
+  
+  .curiosidade {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .curiosidade img {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  
+  .campeoes-artilheiros {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .menu {
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #004d00;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: max-height 0.3s ease;
+  }
+  
+  .menu.active {
+    max-height: 500px;
+    padding: 0.5rem 0;
+  }
+  
+  .menu li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .menu a {
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem;
+  }
+  
+  /* Animação do hamburger para X */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .cards-titulos {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card-titulo {
+    padding: 1rem;
+  }
+  
+  .card-titulo img {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .numero-titulos {
+    font-size: 1.2rem;
+  }
+  
+  .anos-titulos {
+    font-size: 0.8rem;
+  }
+  
+  .cronologia {
+    grid-template-columns: 1fr;
+  }
+  
+  .era {
+    padding: 1.5rem;
+  }
+  
+  .historia-item {
+    padding: 1rem;
+  }
+  
+  .historia-item h4 {
+    font-size: 1.2rem;
+  }
+  
+  .modal-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card img {
+    height: 150px;
+  }
+  
+  .card h3 {
+    font-size: 1rem;
+  }
+  
+  .curiosidade img {
+    height: 200px;
+  }
+  
+  .menu-toggle {
+    padding: 10px;
+    right: 15px;
+    top: 15px;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    display: flex !important;
+    max-height: none !important;
+    position: static !important;
+  }
+  
+  .menu-toggle {
+    display: none !important;
+  }
+}
+
+/* ===== SEÇÃO DOS TIMES ===== */
+#times {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.times-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.categoria-times h3 {
+  color: #004d00;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #004d00;
+  padding-bottom: 0.5rem;
+}
+
+.lista-times {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.time-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.time-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.time-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.time-card h4 {
+  color: #004d00;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.time-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ===== ESTATÍSTICAS GERAIS ===== */
+.estatisticas {
+  margin-top: 2rem;
+  text-align: center; /* Centraliza todo o conteúdo */
+}
+
+.estatisticas h3 {
+  color: #004d00;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.cards-estatisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px; /* Largura máxima para centralizar */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-estatistica {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center; /* Centraliza o conteúdo dentro de cada card */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+}
+
+.card-estatistica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card-estatistica h4 {
+  color: #004d00;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #004d00;
+  padding-bottom: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card-estatistica p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsividade para as estatísticas */
+@media (max-width: 992px) {
+  .cards-estatisticas {
+    grid-template-columns: 1fr; /* 1 coluna em tablets/mobile */
+    max-width: 500px;
+  }
+  
+  .card-estatistica {
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .estatisticas h3 {
+    font-size: 1.6rem;
+  }
+  
+  .card-estatistica h4 {
+    font-size: 1.2rem;
+  }
+  
+  .card-estatistica p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== FOOTER MODERNO ===== */
+.footer-modern {
+  background: #002400;
+  color: #ffffff;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  position: relative;
+  margin-top: 4rem;
+  border-top: 4px solid #00ff73;
+}
+
+.footer-modern .footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-modern .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-modern .footer-logo h3 {
+  font-size: 1.8rem;
+  color: #00ff73;
+}
+
+.footer-modern .ball {
+  font-size: 1.8rem;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* Animação da bola */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.footer-modern .footer-slogan {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.footer-modern .footer-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.footer-modern .footer-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-modern .footer-menu li a:hover {
+  color: #00ff73;
+  text-decoration: underline;
+}
+
+.footer-modern .footer-bottom {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Responsividade para o header e barra de pesquisa */
+@media (max-width: 768px) {
+  .jogadores-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .jogadores-header h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-container {
+    justify-content: center;
+  }
+  
+  .search-input {
+    min-width: 200px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    min-width: auto;
+  }
+  
+  .search-button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+  
+  .footer-modern .footer-logo h3 {
+    font-size: 1.4rem;
+  }
+  
+  .footer-modern .footer-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Adicione este CSS ao seu arquivo style.css */
+
+/* Estilos para o filtro */
+.filtro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.filtro-select {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #004d00;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  min-width: 250px;
+  transition: all 0.3s ease;
+}
+
+.filtro-select:focus {
+  border-color: #006600;
+  box-shadow: 0 0 8px rgba(0, 102, 0, 0.3);
+}
+
+.limpar-filtro {
+  padding: 0.8rem 1.5rem;
+  background: #004d00;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.limpar-filtro:hover {
+  background: #006600;
+}
+
+/* Estilo para o título do país filtrado */
+.titulo-pais-filtrado {
+  text-align: center;
+  color: #004d00;
+  font-size: 2rem;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #004d00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .filtro-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .filtro-select {
+    min-width: 200px;
+  }
+}
+
+/* Adicione ao CSS */
+.times-filtrados {
+  margin-top: 1rem;
+}
+
