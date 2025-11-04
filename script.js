@@ -334,7 +334,7 @@ if (filtroPais && limparFiltro) {
                 const pais = card.getAttribute('data-pais');
                 const titulos = card.getAttribute('data-titulos')?.split(';') || [];
                 const curiosidades = card.getAttribute('data-curiosidade')?.split(';') || [];
-                
+                git
                 modalTimeBody.innerHTML = `
                     <h2>${nome}</h2>
                     <p><strong>País:</strong> ${pais}</p>
