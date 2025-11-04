@@ -331,18 +331,18 @@ if (filtroPais && limparFiltro) {
         document.querySelectorAll('.times-filtrados .time-card').forEach(card => {
           card.addEventListener('click', function() {
             const nome = card.querySelector('h4').textContent;
-                const pais = card.getAttribute('data-pais');
-                const titulos = card.getAttribute('data-titulos')?.split(';') || [];
-                const curiosidades = card.getAttribute('data-curiosidade')?.split(';') || [];
-                git
-                modalTimeBody.innerHTML = `
-                    <h2>${nome}</h2>
-                    <p><strong>País:</strong> ${pais}</p>
-                    <h3>Principais Títulos:</h3>
-                    <ul>${titulos.map(t => `<li>${t.trim()}</li>`).join('')}</ul>
-                    <h3>Curiosidade:</h3>
-                    <ul>${curiosidades.map(c => `<li>${c.trim()}</li>`).join('')}</ul>
-                `;
+            const pais = card.getAttribute('data-pais');
+            const titulos = card.getAttribute('data-titulos')?.split(';') || [];
+            const curiosidades = card.getAttribute('data-curiosidade')?.split(';') || [];
+            
+            modalTimeBody.innerHTML = `
+                <h2>${nome}</h2>
+                <p><strong>País:</strong> ${pais}</p>
+                <h3>Principais Títulos:</h3>
+                <ul>${titulos.map(t => `<li>${t.trim()}</li>`).join('')}</ul>
+                <h3>Curiosidade:</h3>
+                <ul>${curiosidades.map(c => `<li>${c.trim()}</li>`).join('')}</ul>
+            `;
             modalTime.style.display = 'flex';
             document.body.style.overflow = 'hidden';
           });
