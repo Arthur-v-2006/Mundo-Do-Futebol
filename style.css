@@ -173,7 +173,7 @@ h3 {
   border-radius: 25px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
   min-width: 45px;
 }
 
@@ -648,7 +648,6 @@ tr:hover {
     padding: 1rem;
   }
   
-  /* Animação do hamburger para X */
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(-45deg) translate(-5px, 6px);
   }
@@ -1030,8 +1029,6 @@ tr:hover {
   }
 }
 
-
-
 /* Estilos para o filtro */
 .filtro-container {
   display: flex;
@@ -1068,7 +1065,7 @@ tr:hover {
   border-radius: 25px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .limpar-filtro:hover {
