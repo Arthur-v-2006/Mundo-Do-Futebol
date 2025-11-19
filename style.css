@@ -1099,3 +1099,72 @@ tr:hover {
   margin-top: 1rem;
 }
 
+/* ===== HEADER FIXO PARA MOBILE ===== */
+.page-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #004d00;
+  color: white;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title {
+  font-size: 1.8;
+  margin: 0;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.page-header .menu-toggle {
+  top: auto;
+  margin-left: auto;
+  background: transparent;
+  border: 2px solid white;
+  padding: 6px;
+}
+
+nav {
+  background: #004d00;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0;
+}
+
+body.has-fixed-header {
+  padding-top: 70px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 767px) {
+  .page-header {
+    display: flex;
+  }
+  
+  body.has-fixed-header {
+    padding-top: 70px;
+  }
+  
+  .menu {
+    top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    display: none;
+  }
+  
+  body.has-fixed-header {
+    padding-top: 0;
+  }
+}
+

@@ -363,3 +363,22 @@ if (filtroPais && limparFiltro) {
   });
 }
 
+// ===== HEADER FIXO PARA MOBILE =====
+document.addEventListener('DOMContentLoaded', function() {
+    const pageHeader = document.querySelector('.page-header');
+    
+    if (pageHeader) {
+        if (window.innerWidth <= 767) {
+            document.body.classList.add('has-fixed-header');
+        }
+        
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 767) {
+                document.body.classList.add('has-fixed-header');
+            } else {
+                document.body.classList.remove('has-fixed-header');
+            }
+        });
+    }
+    
+});
