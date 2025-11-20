@@ -506,6 +506,45 @@ tr:hover {
   padding-bottom: 0.5rem;
 }
 
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+    .campeoes, .artilheiros {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 2rem;
+    }
+    
+    .tabela-campeoes, .tabela-artilheiros {
+        min-width: 650px;
+    }
+    
+    .campeoes::-webkit-scrollbar,
+    .artilheiros::-webkit-scrollbar {
+        height: 6px;
+    }
+    
+    .campeoes::-webkit-scrollbar-thumb,
+    .artilheiros::-webkit-scrollbar-thumb {
+        background: #004d00;
+        border-radius: 3px;
+    }
+    
+    .campeoes::-webkit-scrollbar-track,
+    .artilheiros::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+}
+
+@media (min-width: 769px) {
+    .campeoes, .artilheiros {
+        overflow: visible;
+    }
+    
+    .tabela-campeoes, .tabela-artilheiros {
+        min-width: auto;
+    }
+}
+
 /* ===== HISTÓRIA ===== */
 .introducao-historia {
   background: linear-gradient(135deg, #004d00, #006600);
