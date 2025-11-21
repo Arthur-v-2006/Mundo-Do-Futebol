@@ -382,3 +382,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 });
+
+// ===== TÍTULO CLICÁVEL PARA VOLTAR AO TOPO =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Fazer o título do header clicável para voltar ao topo (apenas no mobile)
+    const pageTitle = document.querySelector('.page-title');
+    if (pageTitle) {
+        // Adicionar estilo indicando que é clicável
+        pageTitle.style.cursor = 'pointer';
+        pageTitle.title = 'Clique para voltar ao topo';
+        
+        // Verificar se é mobile
+        function isMobile() {
+            return window.innerWidth <= 767;
+        }
+        
+        // Evento de clique - apenas no mobile
+        pageTitle.addEventListener('click', function() {
+            if (isMobile()) {
+                // Rolagem suave para o topo da página atual
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+        
+        // Atualizar comportamento quando a janela for redimensionada
+        window.addEventListener('resize', function() {
+            if (isMobile()) {
+                pageTitle.style.cursor = 'pointer';
+                pageTitle.title = 'Clique para voltar ao topo';
+            } else {
+                pageTitle.style.cursor = 'default';
+                pageTitle.title = '';
+            }
+        });
+    }
+});
