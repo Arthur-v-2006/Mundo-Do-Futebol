@@ -43,7 +43,7 @@ body {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-/* ===== AJUSTES DO BANNER PARA MOBILE ===== */
+/* ===== BANNER PARA MOBILE ===== */
 @media (max-width: 767px) {
   .banner img {
     height: 250px; 
@@ -203,6 +203,8 @@ h3 {
   background: #006600;
 }
 
+
+
 /* Estilo para quando não há resultados */
 .no-results {
   text-align: center;
@@ -258,7 +260,6 @@ h3 {
   flex-grow: 1;
 }
 
-/* Responsividade  */
 @media (max-width: 1200px) {
   .cards-container {
     grid-template-columns: repeat(4, 1fr);
@@ -506,7 +507,6 @@ tr:hover {
   padding-bottom: 0.5rem;
 }
 
-/* ===== Responsividade ===== */
 @media (max-width: 768px) {
     .campeoes, .artilheiros {
         overflow-x: auto;
@@ -648,7 +648,6 @@ tr:hover {
   line-height: 1.7;
 }
 
-/* ===== RESPONSIVIDADE ===== */
 @media (min-width: 768px) {
   .banner h1 {
     font-size: 3rem;
@@ -937,7 +936,6 @@ tr:hover {
   color: #333;
 }
 
-/* Responsividade para as estatísticas */
 @media (max-width: 992px) {
   .cards-estatisticas {
     grid-template-columns: 1fr;
@@ -1042,7 +1040,6 @@ tr:hover {
   margin-top: 0.5rem;
 }
 
-/* Responsividade para o header e barra de pesquisa */
 @media (max-width: 768px) {
   .jogadores-header {
     flex-direction: column;
@@ -1143,7 +1140,6 @@ tr:hover {
   border-bottom: 3px solid #004d00;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .filtro-container {
     flex-direction: column;
@@ -1155,7 +1151,6 @@ tr:hover {
   }
 }
 
-/* Adicione ao CSS */
 .times-filtrados {
   margin-top: 1rem;
 }
@@ -1204,7 +1199,6 @@ body.has-fixed-header {
   padding-top: 70px;
 }
 
-/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 767px) {
   .page-header {
     display: flex;

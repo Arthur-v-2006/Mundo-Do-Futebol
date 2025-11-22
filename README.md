@@ -1,66 +1,62 @@
-Mundo do Futebol:
+# Mundo do Futebol
 
-Um site completo e responsivo dedicado ao universo do futebol, apresentando histórias, curiosidades, estatísticas e informações sobre os maiores jogadores, times e copas do mundo.
+# 📋 Descrição do Projeto
+Mundo do Futebol é um site completo e responsivo dedicado ao universo do futebol, apresentando histórias, curiosidades, estatísticas e informações sobre os maiores jogadores, times e copas do mundo.
 
-
-Sobre o Projeto:
-
+# 🎯 Sobre o Projeto
 O Mundo do Futebol é uma aplicação web desenvolvida para oferecer uma experiência imersiva no mundo do esporte mais popular do planeta. O site apresenta:
 
-História completa do futebol - desde as origens antigas até a era atual
+- História completa do futebol - desde as origens antigas até a era atual
 
-Curiosidades fascinantes - fatos interessantes e momentos marcantes
+- Curiosidades fascinantes - fatos interessantes e momentos marcantes
 
-Perfil de jogadores lendários - biografias, títulos e curiosidades
+- Perfil de jogadores lendários - biografias, títulos e curiosidades
 
-Times icônicos - informações sobre os clubes mais importantes de cada continente
+- Times icônicos - informações sobre os clubes mais importantes de cada continente
 
-Copa do Mundo - estatísticas, campeões e artilheiros
+- Copa do Mundo - estatísticas, campeões e artilheiros
 
+# ⚙️ Funcionalidades e Principais Características
 
-Funcionalidades e Principais Características:
+- Design Responsivo - Adaptado para todos os dispositivos (desktop, tablet, mobile)
 
-Design Responsivo - Adaptado para todos os dispositivos (desktop, tablet, mobile)
+- Menu Hamburguer - Navegação intuitiva para dispositivos móveis
 
-Menu Hamburguer - Navegação intuitiva para dispositivos móveis
+- Sistema de Pesquisa - Busca por jogadores na página de atletas
 
-Sistema de Pesquisa - Busca por jogadores na página de atletas
+- Modais Interativos - Informações detalhadas sobre jogadores e times
 
-Modais Interativos - Informações detalhadas sobre jogadores e times
+- Filtros por País - Organização de times por nacionalidade
 
-Filtros por País - Organização de times por nacionalidade
+- Animações Suaves - Transições e efeitos visuais agradáveis
 
-Animações Suaves - Transições e efeitos visuais agradáveis
+- Tabelas de Dados - Estatísticas completas sobre Copas do Mundo
 
-Tabelas de Dados - Estatísticas completas sobre Copas do Mundo
+# 📄 Páginas Disponíveis
 
+- Início - Apresentação do site e introdução ao conteúdo
 
-Páginas Disponíveis:
+- História - Linha do tempo completa da evolução do futebol
 
-Início - Apresentação do site e introdução ao conteúdo
+- Curiosidades - Fatos interessantes e momentos históricos
 
-História - Linha do tempo completa da evolução do futebol
+- Jogadores - Perfis detalhados dos maiores atletas da história
 
-Curiosidades - Fatos interessantes e momentos históricos
+- Times - Informações sobre clubes icônicos do mundo todo
 
-Jogadores - Perfis detalhados dos maiores atletas da história
+- Copa do Mundo - Estatísticas, campeões e recordes
 
-Times - Informações sobre clubes icônicos do mundo todo
+# 🛠️ Tecnologias Utilizadas
 
-Copa do Mundo - Estatísticas, campeões e recordes
+- HTML5
 
+- CSS3
 
+- JavaScript
 
-Tecnologias Utilizadas:
+- Design Responsivo
 
-HTML5
+# 👥 Membros do Grupo
 
-CSS3
-
-JavaScript
-
-Design Responsivo
-
-
-Membros do Grupo:Arthur Vinicius
-GitHub: @Arthur-v-2006
+- Arthur Vinicius
+- GitHub: @Arthur-v-2006
