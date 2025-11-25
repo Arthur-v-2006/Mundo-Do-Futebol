@@ -65,4 +65,4 @@ O Mundo do Futebol é uma aplicação web desenvolvida para oferecer uma experi�
 - Ctrl + F5 para executar o código
 
 # 🌐 Link do Site
-- https://6921af08c9f44479eea0e7ef--helpful-praline-6e3371.netlify.app/
+- https://helpful-praline-6e3371.netlify.app/
